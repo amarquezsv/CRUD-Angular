@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../../domain/models/product.model';
 
-// In this simple case, the storage model is identical to the domain model.
 interface ProductStorageModel {
   id: number;
   name: string;
@@ -16,7 +15,6 @@ export class ProductLocalStorageAdapter {
   fromDomain(product: Product): ProductStorageModel {
     return { ...product };
   }
-
   toDomain(storageModel: ProductStorageModel): Product {
     return { ...storageModel };
   }

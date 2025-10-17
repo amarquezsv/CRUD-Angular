@@ -9,7 +9,7 @@ import { ProductLocalStorageAdapter } from './product-local-storage.adapter';
 })
 export class ProductLocalStorageRepository implements ProductRepository {
   private readonly STORAGE_KEY = 'products_crud_angular';
-  private nextId: number = 1; // Simple ID 
+  private nextId: number = 1;
 
   constructor(private adapter: ProductLocalStorageAdapter) {
     const products = this.getProductsFromLocalStorage();
@@ -57,7 +57,6 @@ export class ProductLocalStorageRepository implements ProductRepository {
     }
     return throwError(() => new Error('Product not found for update'));
   }
-
   deleteProduct(id: number): Observable<boolean> {
     let products = this.getProductsFromLocalStorage();
     const initialLength = products.length;

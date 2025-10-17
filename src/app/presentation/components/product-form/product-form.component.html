@@ -5,8 +5,7 @@
 
   <div class="md:col-span-2">
     <label for="name"
-      class="block text-sm font-semibold text-angular-dark-grey">Product
-      Name</label>
+      class="block text-sm font-semibold text-angular-dark-grey">Product</label>
     <input
       type="text"
       id="name"
@@ -16,8 +15,8 @@
     <div
       *ngIf="productForm.get('name')?.invalid && (productForm.get('name')?.dirty || productForm.get('name')?.touched)"
       class="mt-1 text-xs text-red-500 space-y-1">
-      <div *ngIf="productForm.get('name')?.errors?.['required']">Name is required.</div>
-      <div *ngIf="productForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters.</div>
+      <div *ngIf="productForm.get('name')?.errors?.['required']">required.</div>
+      <div *ngIf="productForm.get('name')?.errors?.['minlength']">At least 5 characters.</div>
     </div>
   </div>
 
@@ -34,7 +33,7 @@
     <div
       *ngIf="productForm.get('price')?.invalid && (productForm.get('price')?.dirty || productForm.get('price')?.touched)"
       class="mt-1 text-xs text-red-500 space-y-1">
-      <div *ngIf="productForm.get('price')?.errors?.['required']">Price is required.</div>
+      <div *ngIf="productForm.get('price')?.errors?.['required']">required.</div>
       <div *ngIf="productForm.get('price')?.errors?.['min']">Price must be greater than 0.</div>
     </div>
   </div>
@@ -51,7 +50,7 @@
     <div
       *ngIf="productForm.get('units')?.invalid && (productForm.get('units')?.dirty || productForm.get('units')?.touched)"
       class="mt-1 text-xs text-red-500 space-y-1">
-      <div *ngIf="productForm.get('units')?.errors?.['required']">Units is required.</div>
+      <div *ngIf="productForm.get('units')?.errors?.['required']">required.</div>
       <div *ngIf="productForm.get('units')?.errors?.['min']">Units must be 0 or  greater.</div>
     </div>
   </div>
