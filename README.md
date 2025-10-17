@@ -4,11 +4,17 @@ A simple Angular-based CRUD application. Built with Tailwind CSS for styling and
 
 📁 Project Structure
 src/
+
 ├── app/
+
 │   ├── domain/           # Interfaces, models, and base services
+
 │   ├── presentation/     # UI components
+
 │   ├── infrastructure/   # Adapter for Local Storage
+
 │   └── app.module.ts     # DI and module declarations
+
 └── styles/               # Tailwind configuration
 
 
